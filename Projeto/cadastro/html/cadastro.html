@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Animal</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Bull Point</div>
+    <ul>
+        <li><a href="../../cadastro/html/cadastro.html" class="active">Cadastro</a></li>
+        <li><a href="../../visualizar/html/visualizar.html">Visualizar Dados</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Cadastro do Animal</h2>
+
+    <form id="form-cadastro">
+        <label>Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label>Peso (kg):</label>
+        <input type="number" id="peso" required>
+
+        <label>Preço (R$):</label>
+        <input type="number" id="preco" required>
+
+        <label>Localização:</label>
+        <input type="text" id="local" required>
+
+        <label>Registro:</label>
+        <input type="text" id="registro" required>
+
+        <label>Idade (anos):</label>
+        <input type="number" id="idade" required>
+
+        <label>Condições:</label>
+        <input type="text" id="condicoes" required>
+
+        <label>Entrega:</label>
+        <input type="text" id="entrega" required>
+
+        <label>Raça:</label>
+        <input type="text" id="raca" required>
+
+        <label>Categoria:</label>
+        <select id="categoria" required>
+            <option value="Touro">Touro</option>
+            <option value="Boi">Boi</option>
+        </select>
+
+        <label>Foto:</label>
+        <input type="file" id="foto" accept="image/*">
+
+        <button type="submit">Cadastrar Animal</button>
+    </form>
+</div>
+</body>
+    <script src="../js/script.js"></script>
+</html>
