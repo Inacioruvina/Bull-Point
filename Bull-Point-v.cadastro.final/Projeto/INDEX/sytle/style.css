@@ -1,0 +1,273 @@
+/* RESET E BASE */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* fundo claro */
+    font-family: Arial, sans-serif;
+    font-size: 14px; 
+    color: #050000;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    background-color: #355E3B; /* header */
+    padding: 10px 0;
+    opacity: 0.95;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bullpoint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#Boilogo {
+    width: 40px;
+    height: 40px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px; 
+    margin: 0;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-links a {
+    color: #EFE9DA;
+    text-decoration: none;
+    font-size: 16px; 
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* TEXTOS CENTRADOS */
+.Neve { color: #000000; }
+.Centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+/* TITULOS */
+#Bull { font-size: 36px; font-weight: bold; } 
+#Genetica { font-size: 18px; }
+
+/* BOTÕES */
+#Animais, #ithree, .card button {
+    background-color: #B68A2C;
+    color: #110202;
+    border: none;   
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+#Animais:hover, #ithree:hover, .card button:hover {
+    background-color: #917a48;
+    transform: scale(1.05);
+}
+
+/* Botão Quero Comprar */
+#compra {
+    background-color: #917a48;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 6px 10px; /* padding horizontal menor para reduzir largura */
+    border-radius: 12px;
+    cursor: pointer;
+    display: block; /* necessário para centralizar horizontalmente */
+    width: 120px; /* define largura fixa */
+    text-align: center; /* centraliza o texto dentro do botão */
+    margin: 10px auto; /* centraliza horizontalmente na página */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(145, 122, 72, 0.5);
+}
+
+
+
+
+#compra:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(145, 122, 72, 0.7);
+    background-color: #B68A2C; /* muda para cor principal ao passar o mouse */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(145, 122, 72, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(145, 122, 72, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(145, 122, 72, 0); }
+}
+
+/* Botão Quero Vender */
+#Venda {
+    color: #B68A2C;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#Venda:hover {
+    color: #917a48;
+}
+
+/* BUSCA */
+#Busca {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #355E3B;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+.grupo-busca {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ione, #itwo, #ithree {
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#ione { flex: 2; width: 45%; background-color: #0F2D21; color: #fff; }
+#itwo { flex: 1; width: 15%; background-color: #0F2D21; color: #fff; }
+#ithree { flex: 0.8; width: 25%; background-color: #B68A2C; color: #fff; }
+
+/* CARDS */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.card {
+    width: 350px; 
+    min-height: 300px; 
+    padding: 15px;
+    background-color: #355E3B;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: scale(1.03); cursor: pointer; }
+
+.Boi {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* AVALIAÇÕES */
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.review-card {
+    width: 350px;
+    min-height: 150px;
+    padding: 15px;
+    background-color: #355E3B;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.review-card:hover { transform: scale(1.03); cursor: pointer; }
+
+/* PONTOS FORTES */
+#forte {
+    padding: 8px 15px;
+    background-color: #355E3B;
+    border-radius: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+.ponto { font-size: 16px; }
+
+/* FOOTER */
+.rodape {
+    width: 100%;
+    background-color: #355E3B;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    opacity: 0.95;
+}
+
+.rodape-left span { font-size: 12px; }
+.rodape-icone { width: 18px; height: 18px; }
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 480px) {
+    body { font-size: 0.9em; }
+    .header-content { flex-direction: column; gap: 10px; }
+    .menu-links { gap: 10px; font-size: 14px; }
+    .principal { max-width: 120px; }
+    #Bull { font-size: 28px; }
+    #Genetica { font-size: 16px; }
+    #Animais, #compra { padding: 6px 15px; font-size: 16px; }
+    .card-container { flex-direction: column; align-items: center; }
+    .card, .review-card { width: 90%; min-height: auto; }
+    .card button { font-size: 16px; }
+    .Boi { height: 150px; }
+    #forte { width: 90%; padding: 10px; }
+    .ponto { font-size: 14px; }
+    .rodape-left span { font-size: 12px; text-align: center; }
+}

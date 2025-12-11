@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Animais</title>
+    <link rel="stylesheet" href="../sytle_da_compra/a.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <nav class="bullpoint">
+                <!--<img src="Bull Point 1.png" alt="Bull Point Logo" id="Boilogo">-->
+                <h1 class="logo">Bull Point</h1>
+            </nav>
+            <nav class="menu-links">
+                <a href="../../visualizar/html/visualizar.html">Visualizar</a>
+                <a href="../../cadastro/html/cadastro.html" class="active">Cadastro</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Cadastro de Animais</h1>
+    <div id="lista">
+        <!-- Cards aparecerão aqui -->
+    </div>
+
+    <!-- Modal de Edição -->
+    <div id="modalEditar">
+        <div class="modal-content">
+            <h2>Editar Animal</h2>
+            <label>Nome:</label>
+            <input type="text" id="editNome" required>
+            <label>Peso (kg):</label>
+            <input type="number" id="editPeso" required>
+            <label>Preço (R$):</label>
+            <input type="number" id="editPreco" required>
+            <label>Localização:</label>
+            <input type="text" id="editLocal">
+            <label>Registro:</label>
+            <input type="text" id="editRegistro">
+            <label>Idade (anos):</label>
+            <input type="number" id="editIdade">
+            <label>Condições:</label>
+            <input type="text" id="editCondicoes">
+            <label>Entrega:</label>
+            <input type="text" id="editEntrega">
+            <label>Raça:</label>
+            <input type="text" id="editRaca">
+            <label>Categoria:</label>
+            <select id="editCategoria">
+                <option value="">Selecione</option>
+                <option value="Doméstico">Doméstico</option>
+                <option value="Silvestre">Silvestre</option>
+                <option value="Exótico">Exótico</option>
+            </select>
+            <label>Telefone:</label>
+            <input type="text" id="editTelefone">
+
+            <div class="modal-actions">
+                <button type="button" onclick="fecharModal()">Cancelar</button>
+                <button type="button" onclick="salvarEdicao()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const lista = document.getElementById("lista");
+        let dados = JSON.parse(localStorage.getItem("animais")) || [];
+        let indexEditando = null;
+
+        function renderizarCards() {
+            lista.innerHTML = "";
+            if (!dados || dados.length === 0) {
+                lista.innerHTML = "<p style='text-align:center; color:#999;'>Nenhum animal cadastrado ainda.</p>";
+                return;
+            }
+
+            dados.forEach((item, index) => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                card.innerHTML = `
+                    <h3>${item.nome || "-"}</h3>
+                    <p><strong>Peso:</strong> ${item.peso || "-"} kg</p>
+                    <p><strong>Preço:</strong> R$ ${item.preco || "-"}</p>
+                    <p><strong>Localização:</strong> ${item.local || "-"}</p>
+                    <p><strong>Registro:</strong> ${item.registro || "-"}</p>
+                    <p><strong>Idade:</strong> ${item.idade || "-"} anos</p>
+                    <p><strong>Condições:</strong> ${item.condicoes || "-"}</p>
+                    <p><strong>Entrega:</strong> ${item.entrega || "-"}</p>
+                    <p><strong>Raça:</strong> ${item.raca || "-"}</p>
+                    <p><strong>Categoria:</strong> ${item.categoria || "-"}</p>
+                    <p><strong>Telefone:</strong> ${item.telefone || "-"}</p>
+                    ${item.foto ? `<img src="${item.foto}" alt="Foto" style="margin-top:10px; border-radius:8px; width:100%; height:220px; object-fit:cover;">` : ""}
+                    <div class="btn-group"> 
+                       <button class="btn-comprar" type="button" onclick="comprar(${index})">Comprar</button>
+                    </div>
+                `;
+
+                lista.appendChild(card);
+            });
+
+            document.querySelectorAll('.btn-editar').forEach(btn => {
+                btn.addEventListener('click', (e) => abrirModalEditar(Number(e.currentTarget.dataset.index)));
+            });
+            document.querySelectorAll('.btn-excluir').forEach(btn => {
+                btn.addEventListener('click', (e) => excluir(Number(e.currentTarget.dataset.index)));
+            });
+        }
+
+
+        function comprar(index) {
+            const item = dados[index];
+            const nome = item && item.nome ? item.nome : "este animal";
+            alert(`Entre em contato com o vendedor para comprar ${Number}`);
+        }
+
+        document.addEventListener("DOMContentLoaded", renderizarCards);
+    </script>
+
+</body>
+</html>
