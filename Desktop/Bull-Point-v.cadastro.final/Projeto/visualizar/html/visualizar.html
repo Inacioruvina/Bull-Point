@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Visualizar Dados</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+			<div class="header-content">
+				<nav class="bullpoint">  
+					<img src="Bull Point 1.png" alt="Bull Point Logo" id="Boilogo">
+					<h1 class="logo">Bull Point</h1>
+				</nav>
+
+				<nav class="menu-links">
+					<a href="/Projeto/INDEX/HTML/pagina-1.html">Home</a>
+					<a href="../../cadastro/html/cadastro.html">Cadastro</a>
+					<a href="../../visualizar/html/visualizar.html" class="active">Visualizar</a>
+				</nav>
+			</div>
+</header>
+
+<div class="container">
+	<div class="btn-container">
+		<a href="../../cadastro/html/cadastro.html" class="btn-cadastrar">+ Novo Cadastro</a>
+	</div>
+    
+	<h2>Animais Disponíveis</h2>
+	<div id="lista"></div>
+</div>
+
+<!-- MODAL DE EDIÇÃO -->
+<div id="modalEditar" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h2>Editar Animal</h2>
+			<span class="fechar" onclick="fecharModal()">&times;</span>
+		</div>
+
+		<form id="formEditar" onsubmit="event.preventDefault(); salvarEdicao();">
+			<div class="form-grupo">
+				<label>Nome:</label>
+				<input type="text" id="editNome" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Peso (kg):</label>
+				<input type="number" id="editPeso" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Preço (R$):</label>
+				<input type="number" id="editPreco" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Localização:</label>
+				<input type="text" id="editLocal" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Registro:</label>
+				<input type="text" id="editRegistro" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Idade (anos):</label>
+				<input type="number" id="editIdade" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Condições:</label>
+				<input type="text" id="editCondicoes" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Entrega:</label>
+				<input type="text" id="editEntrega" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Raça:</label>
+				<input type="text" id="editRaca" required>
+			</div>
+
+			<div class="form-grupo">
+				<label>Categoria:</label>
+				<select id="editCategoria" required>
+					<option value="Touro">Touro</option>
+					<option value="Boi">Boi</option>
+					<option value="Vaca">Vaca</option>
+					<option value="Bezerro">Bezerro</option>
+				</select>
+			</div>
+
+			<div class="form-grupo">
+				<label>Telefone:</label>
+				<input type="text" id="editTelefone" required>
+			</div>
+
+			<div class="modal-buttons">
+				<button type="submit" class="btn-salvar">Salvar Alterações</button>
+				<button type="button" class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<footer class="rodape">
+			<div class="rodape-content">
+				<div class="rodape-left">
+					<img src="Phone icon.png" alt="Contato" class="rodape-icone">
+					<span>Contato</span>
+				</div>
+			</div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
+
