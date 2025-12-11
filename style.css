@@ -3,6 +3,38 @@
         max-width: 100%;
         font-size: 1.0em;
     }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-links {
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .principal {
+        max-width: 150px;
+    }
+    
+    #Boilogo {
+        width: 40px;
+        height: 40px;
+    }
+
+    #Bull {
+        font-size: 32px;
+    }
+
+    #Genetica {
+        font-size: 18px;
+    }
+
+    #Animais {
+        padding: 10px 20px;
+        font-size: 22px;
+    }
     
     .card-container {
         flex-direction: column;
@@ -19,28 +51,108 @@
     }
 
     .review-card {
-        width: 90%;   /* ← ESSA LINHA */
-    }
-
-    #Busca {
-        flex-direction: column;
         width: 90%;
     }
+
+
 
     #ione, #itwo, #ithree {
         width: 100%;
     }
+
+    .Boi {
+        height: 180px;
+    }
+
+    #forte {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .ponto  {
+        font-size: 16px;
+    }
+    
+    .review-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .rodape-left span {
+        font-size: 14px;
+        text-align: center;
+        
+    }
+
+    .rodape {
+        padding: 10px 20px;
+    }
+
+    .rodape-icone {
+        width: 18px;
+        height: 18px;
+    }
+    
 }
 
 
-body {
+html, body {
     background-color: #0F2D21;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.menu {
+#Boilogo {
+    width: 50px;
+    height: 50px;
+}
+
+.bullpoint {
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.header {
+    width: 100%;
+    background-color: #325636; /* cor do seu Figma */
+    padding: 15px 0px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #000000;
+    font-size: 28px;
+    margin: 0;
+}
+
+.menu-links {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-links a {
+    color: #EFE9DA;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-links a:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .Neve {
@@ -55,15 +167,49 @@ body {
     text-align: center;
 }
 
+.principal {
+    display: block;
+    margin: 20px auto;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+#Bull {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#Genetica {
+    font-size: 24px;
+}
 
 #Animais {
-    padding: 10px 35px;
+    padding: 10px 50px;
     width: 100%;
     background-color: #B68A2C;
     max-width: fit-content;
     margin: auto;
     border-radius: 20px;
     text-align: center;
+    display: block;
+    font-size: 30px;
+    border: none;
+}
+
+#Animais:hover {
+    background-color: #917a48;
+    color: #000000;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: scale(1.03);
+}
+
+#Venda {
+    color: #EFE9DA;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 24px;
 }
 
 #Busca {
@@ -141,11 +287,16 @@ body {
     max-width: 1200px;
 }
 
-
+.Boi {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
 
 .card {
     width: 500px;
-    height: 400px;
+    min-height: 400px;
     padding: 20px;
     background-color: #355E3B;
     border-radius: 20px;
@@ -158,6 +309,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
+}
+
+.card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .card button {
@@ -182,6 +339,7 @@ body {
     transform: scale(1.03);
 }
 
+
 .review-container {
     display: flex;
     justify-content: center;
@@ -195,8 +353,9 @@ body {
 }
 
 .review-card {
-    width: 260px;
-    height: 150px;
+    width: 500px;
+    min-height: 200px;
+    height: auto;
     padding: 20px;
     background-color: #355E3B;
     border-radius: 20px;
@@ -206,9 +365,15 @@ body {
     justify-content: space-between;
 }
 
+.review-card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
 .fake.review {
   width: 100%;
-  height: 14px;
+  height: 20px;
   background: linear-gradient(90deg, #eee, #ddd, #eee);
   border-radius: 4px;
   animation: pulse 1.5s infinite;
@@ -218,4 +383,41 @@ body {
     padding: 10px 20px;
     background-color: #355E3B;
     border-radius: 20px;
+    width: 60%;
+    margin: auto;
 }
+
+.ponto {
+    font-size: 20px;
+}
+
+.rodape {
+    width: 100%;
+    background-color: #325636; /* verde escuro igual da sua imagem */
+    padding: 12px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    opacity: 0.9;
+}
+
+.rodape-content {
+    width: 100%;
+    max-width: 1200px;
+    
+}
+
+
+.rodape-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rodape-icone {
+    width: 22px;
+    height: 22px;
+}
+
+
