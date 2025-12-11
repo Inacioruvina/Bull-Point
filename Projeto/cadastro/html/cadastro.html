@@ -9,13 +9,19 @@
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">Bull Point</div>
-    <ul>
-        <li><a href="../../cadastro/html/cadastro.html" class="active">Cadastro</a></li>
-        <li><a href="../../visualizar/html/visualizar.html">Visualizar Dados</a></li>
-    </ul>
-</nav>
+<header class="header">
+            <div class="header-content">
+                <nav class="bullpoint">  
+                    <img src="Bull Point 1.png" alt="Bull Point Logo" id="Boilogo">
+                    <h1 class="logo">Bull Point</h1>
+                </nav>
+
+                <nav class="menu-links">
+                    <a href="../../visualizar/html/visualizar.html">Visualizar</a>
+                    <a href="../../cadastro/html/cadastro.html" class="active">Cadastro</a>
+                </nav>
+            </div>
+        </header>
 
 <div class="container">
     <h2>Cadastro do Animal</h2>
@@ -56,10 +62,20 @@
 
         <label>Foto:</label>
         <input type="file" id="foto" accept="image/*">
-
-        <button type="submit">Cadastrar Animal</button>
+         <label>Telefone:</label>
+        <input type="text" id="Telefone" required>
+        <br><br>
+        <H3 id="conluit_text">Concluir </H3>
+        <button type="submit" id="botão_ca">Cadastrar Animal</button>
     </form>
 </div>
+<footer class="rodape">
+            <div class="rodape-content">
+                <div class="rodape-left">
+                    <img src="Phone icon.png" alt="Contato" class="rodape-icone">
+                    <span>Contato</span>
+                </div>
+            </div>
 </body>
     <script src="../js/script.js"></script>
 </html>

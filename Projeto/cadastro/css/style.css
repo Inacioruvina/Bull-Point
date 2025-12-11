@@ -2,11 +2,75 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    background: #355E3B;
+    padding: 12px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bullpoint {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.bullpoint img {
+    width: 32px;
+    height: 32px;
+}
+
+.bullpoint h1 {
+    color: white;
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    background: #4a7d52;
+    transform: none;
+}
+
+.menu-links a.active {
+    background: #5a8d62;
+    font-weight: bold;
 }
 
 .navbar {
-    background: #222;
-    padding: 15px;
+    background: #355E3B;
+    padding: 8px 15px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -16,38 +80,210 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
+    font-size: 13px;
 }
 
 .navbar a.active {
+    background: #4a7d52;
     font-weight: bold;
-    text-decoration: underline;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #5a8d62;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    transform: none;
 }
 
 .container {
-    width: 80%;
+    width: 50%;
     margin: 30px auto;
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 6px;
+    flex: 1;
+}
+
+.container h2 {
+    color: #355E3B;
+    border-bottom: 2px solid #B68A2C;
+    padding-bottom: 10px;
+}
+
+label {
+    color: #355E3B;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
 form input, form select {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border-radius: 20px;
+    border: 1px solid #bbb;
 }
 
-.btn {
-    background: green;
-    padding: 10px 15px;
+#foto {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+}
+
+#conluit_text {
+    text-align: center;
+    margin-top: 20px;
+    color: #355E3B;
+}
+
+#botão_ca {
+    background: #B68A2C;
+    padding: 10px 20px;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    transform: none;
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+
+#botão_ca:hover {
+    background: #9a7424;
+    transform: none;
+}
+
+/* FOOTER */
+.rodape {
+    width: 100%;
+    background: #355E3B;
+    padding: 20px 15px;
+    margin-top: 40px;
+    border-top: 3px solid #B68A2C;
+    color: white;
+    box-sizing: border-box;
+}
+
+.rodape-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.rodape-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape-left h3 {
+    color: #B68A2C;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.rodape-left p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.rodape-icone {
+    width: 18px;
+    height: 18px;
+    opacity: 0.9;
+}
+
+.rodape-bottom {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #4a7d52;
+    font-size: 11px;
+    color: #b0b0b0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-links {
+        gap: 15px;
+    }
+
+    .menu-links a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .rodape-content {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .bullpoint h1 {
+        font-size: 18px;
+    }
+
+    .bullpoint img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .menu-links {
+        gap: 10px;
+    }
+
+    .menu-links a {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .rodape {
+        padding: 15px 10px;
+    }
+
+    .rodape-left h3 {
+        font-size: 13px;
+    }
+
+    .rodape-left p {
+        font-size: 11px;
+    }
 }
