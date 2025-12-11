@@ -26,6 +26,5 @@
 
 ## Feito por 
 ### [Inacioruvina](https://github.com/Inacioruvina)
-## E
 ### [Hugo Garcia](https://github.com/GarciaH09)
 
